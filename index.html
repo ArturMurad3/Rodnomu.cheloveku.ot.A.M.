@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мои дети (моя семья)</title>
     
-    <!-- Արգելում ենք Google-ին ինդեքսավորել էջն ու նկարները -->
+    <!-- Արգելում ենք Google-ին ինդեքսավորել -->
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Գաղտնաբառի պատուհան */
         #pass-screen {
             position: fixed;
             top: 0;
@@ -82,7 +81,6 @@
             font-size: 15px;
         }
 
-        /* Կայքի հիմնական մասը */
         #main-content {
             display: none;
             width: 100%;
@@ -94,7 +92,6 @@
             position: relative;
         }
 
-        /* Վերնագիր */
         .header {
             text-align: center;
             margin-top: 10px;
@@ -118,7 +115,6 @@
             font-weight: 300;
         }
 
-        /* Կենտրոնական գիծ */
         .divider-container {
             position: absolute;
             top: 0;
@@ -161,7 +157,6 @@
             font-weight: 600;
         }
 
-        /* Սլայդեր */
         .gallery-container {
             width: 100%;
             display: flex;
@@ -199,7 +194,6 @@
             opacity: 1;
         }
 
-        /* Ներքևի հատված */
         .bottom-section {
             width: 100%;
             display: flex;
@@ -241,14 +235,12 @@
 </head>
 <body>
 
-    <!-- Գաղտնաբառ -->
     <div id="pass-screen">
         <h2>Введите пароль</h2>
         <input type="password" id="pass-input" placeholder="****">
         <button id="pass-btn" onclick="checkPass()">Войти</button>
     </div>
 
-    <!-- Հիմնական էջ -->
     <div id="main-content">
         <div class="header">
             <div class="main-title">Мои дети</div>
@@ -262,11 +254,16 @@
 
         <div class="gallery-container">
             <div class="slider-box" id="photo-slider" onclick="nextImage()">
-                <img src="img1.jpg" class="active" alt="Фото 1">
-                <img src="img2.jpg" alt="Фото 2">
-                <img src="img3.jpg" alt="Фото 3">
-                <img src="img4.jpg" alt="Фото 4">
-                <img src="img5.jpg" alt="Фото 5">
+                <!-- 1-ին նկար (նստարանին) -->
+                <img src="1000041906_2.jpg" class="active" alt="Фото 1">
+                <!-- 2-րդ նկար (քնած) -->
+                <img src="1000041903_2.jpg" alt="Фото 2">
+                <!-- 3-րդ նկար (մահճակալի մոտ) -->
+                <img src="100004100_2.jpg" alt="Фото 3">
+                <!-- 4-րդ նկար (կանաչ բազմոց) -->
+                <img src="1000041897_2.jpg" alt="Фото 4">
+                <!-- 5-րդ նկար (երկու փոքրիկները) -->
+                <img src="1000041894_2.jpg" alt="Фото 5">
             </div>
         </div>
 
@@ -288,7 +285,6 @@
     <script>
         function checkPass() {
             const pass = document.getElementById('pass-input').value;
-            // Գաղտնաբառը 2222 է
             if (pass === "2222") {
                 document.getElementById('pass-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'flex';
